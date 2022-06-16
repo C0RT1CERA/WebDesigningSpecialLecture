@@ -1,0 +1,26 @@
+#d1{
+    background-color: rgb(48, 224, 121);
+    width: 100%;
+    padding-left: 2%;
+    height: 25px;
+    padding-top: 20px;
+    margin-left: 0%;
+}
+
+#d2{
+    background-color: rgb(48, 110, 224);
+    width: 100%;
+    padding-left: 2%;
+    height: 25px;
+    padding-top: 20px;
+    margin-left: 0%;
+}
+
+#d3{
+    background-color: rgb(224, 48, 200);
+    width: 100%;
+    padding-left: 2%;
+    height: 25px;
+    padding-top: 20px;
+    margin-left: 0%;
+}
