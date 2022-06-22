@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .vid-set{
+            width:100%;
+            height: auto ;   
+        }
+        
+        .logo1:hover{
+          
+          color: rgb(0, 0, 0);
+          text-shadow: 2px 2px 4px grey;
+                  
+            
+        }
+        .video-bg{
+  /* position:absolute;
+  justify-content: start;
+overflow: hidden;
+  opacity:0.3; */
+ 
+  padding-bottom:20px;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:1;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.vide_cont{
+    width: 100%;
+    overflow:hidden;
+    display:block;
+    height: 100%;
+    opacity: 0.5;
+}
+.nav1{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    border: 2px solid black;
+
+}
+.vid-top{
+    position: absolute;
+    top: 69px;
+    border: 2px black;
+    
+}
+.border_nav{
+    border-bottom: 2px  solid rgba(0,0,0,0);   
+}
+.border_nav:hover{
+    border-bottom: 2px  solid rgb(117, 116, 116);   
+}
+
+    </style>    
+
+</head>
+
+<body>
+    <video autoplay loop muted class="vide_cont">
+        <source src="vid4.mp4" type="video/mp4">
+      </video> 
+    <nav class="navbar navbar-expand-lg nav1">
+        
+        <div class="container-fluid">
+            <span class="navbar-brand mb-1 h1"><a class="nav-link active logo1" aria-current="page" href="#"><i class="fa fa-home" style="font-size:36px"></i></a></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                
+                <ul class="navbar-nav ">
+                    <li class="nav-item text-white">
+                        <a class="nav-link active border_nav" aria-current="page" href="#">Bio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active border_nav" href="#"> &nbsp;&nbsp;Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active border_nav" href="#">&nbsp;&nbsp;Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active border_nav" href="#">&nbsp;&nbsp;Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active border_nav" href="#">&nbsp;&nbsp;Vision</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active border_nav" href="#" >&nbsp;&nbsp;Sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <video autoplay loop muted class="vid-set vid-top">
+        <source src="vid2.mp4" type="video/mp4">
+      </video>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
