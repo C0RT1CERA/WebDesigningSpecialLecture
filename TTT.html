@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tac-toe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        .master{
+            
+            display: flex;
+        }
+        .nav{
+            
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .head-text{
+            font-family: Corbel; 
+            font-size: 70px; 
+            color: #7F5283;
+            font-weight: bolder;
+        }
+        .wrapper{
+            display: flex;
+            border: 0px solid black;
+            justify-content: center;
+            width: 100%;
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+        .internal{
+            border: 0px solid black;
+            position: relative;
+            /* border: 1px solid red; */
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+        .choice1{
+            color: #1f4690;
+            left: 0px;
+            bottom: -48px;
+            position: absolute;
+            font-size: 100px;
+            font-weight: 900;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .choice2{
+            color: crimson;
+            left: 1px;
+            bottom: -48px;
+            position: absolute;
+            font-size: 100px;
+            font-weight: 900;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .b_c{
+            border: 10px solid #2C3333;
+        }
+        .b_r{
+            border-right:10px solid #2C3333;
+        }
+        .b_l{
+            border-left:10px solid #2C3333;
+        }
+        .b_t{
+            border-top:10px solid #2C3333;
+        }
+        .b_b{
+            border-bottom:10px solid #2C3333;
+        }
+        .refresh-button{
+            position: absolute;
+            left: 85px;
+            top: 5px;
+            cursor:pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#b1c1, #b2c1, #b3c1, #b4c1, #b5c1, #b6c1, #b7c1, #b8c1, #b9c1").css("opacity",0)
+            $("#b1c2, #b2c2, #b3c2, #b4c2, #b5c2, #b6c2, #b7c2, #b8c2, #b9c2").css("opacity",0)
+            $("#rf_bt").click(function(){
+                $("#b1c1, #b2c1, #b3c1, #b4c1, #b5c1, #b6c1, #b7c1, #b8c1, #b9c1").css("opacity",0)
+                $("#b1c2, #b2c2, #b3c2, #b4c2, #b5c2, #b6c2, #b7c2, #b8c2, #b9c2").css("opacity",0)
+            });
+            $("#Btn1").click(function(){
+                $("#b1c2").css("opacity",0)
+                $("#b1c1").css("opacity",1)
+            });
+            $("#Btn2").click(function(){
+                $("#b2c2").css("opacity",0)
+                $("#b2c1").css("opacity",1)
+            });
+            $("#Btn3").click(function(){
+                $("#b3c2").css("opacity",0)
+                $("#b3c1").css("opacity",1)
+            });
+            $("#Btn4").click(function(){
+                $("#b4c2").css("opacity",0)
+                $("#b4c1").css("opacity",1)
+            });
+            $("#Btn5").click(function(){
+                $("#b5c2").css("opacity",0)
+                $("#b5c1").css("opacity",1)
+            });
+            $("#Btn6").click(function(){
+                $("#b6c2").css("opacity",0)
+                $("#b6c1").css("opacity",1)
+            });
+            $("#Btn7").click(function(){
+                $("#b7c2").css("opacity",0)
+                $("#b7c1").css("opacity",1)
+            });
+            $("#Btn8").click(function(){
+                $("#b8c2").css("opacity",0)
+                $("#b8c1").css("opacity",1)
+            });
+            $("#Btn9").click(function(){
+                $("#b9c2").css("opacity",0)
+                $("#b9c1").css("opacity",1)
+            });
+
+            //dbl click
+            $("#Btn1").dblclick(function(){
+                $("#b1c1").css("opacity",0)
+                $("#b1c2").css("opacity",1)
+            });
+            $("#Btn2").dblclick(function(){
+                $("#b2c1").css("opacity",0)
+                $("#b2c2").css("opacity",1)
+            });
+            $("#Btn3").dblclick(function(){
+                $("#b3c1").css("opacity",0)
+                $("#b3c2").css("opacity",1)
+            });
+            $("#Btn4").dblclick(function(){
+                $("#b4c1").css("opacity",0)
+                $("#b4c2").css("opacity",1)
+            });
+            $("#Btn5").dblclick(function(){
+                $("#b5c1").css("opacity",0)
+                $("#b5c2").css("opacity",1)
+            });
+            $("#Btn6").dblclick(function(){
+                $("#b6c1").css("opacity",0)
+                $("#b6c2").css("opacity",1)
+            });
+            $("#Btn7").dblclick(function(){
+                $("#b7c1").css("opacity",0)
+                $("#b7c2").css("opacity",1)
+            });
+            $("#Btn8").dblclick(function(){
+                $("#b8c1").css("opacity",0)
+                $("#b8c2").css("opacity",1)
+            });
+            $("#Btn9").dblclick(function(){
+                $("#b9c1").css("opacity",0)
+                $("#b9c2").css("opacity",1)
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="master">
+        <div class="nav">
+            <p class="head-text">T</p><p class="head-text" style="color:#EF5B0C ;">I</p>
+            <p class="head-text">C - T</p>
+            <p class="head-text" style="color:crimson ;">A</p>
+            <p class="head-text">C - T</p>
+            <p class="head-text" style="color:#3AB4F2 ;">O</p>
+            <p class="head-text" >E</p>
+        </div>
+        <div>
+            </div>
+    </div>
+    <div class="wrapper">
+        <div class="refresh-button">
+            
+            <svg id="rf_bt"width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+            </svg>
+        </div>
+        <div class="internal b_r b_b" id="Btn1"> 
+            <p class="choice1" id="b1c1">O</p>
+            <p class="choice2" id="b1c2">X</p>
+             
+        </div>
+        <div class="internal b_l b_b b_r" id="Btn2">
+            <p class="choice1" id="b2c1">O</p>
+            <p class="choice2" id="b2c2">X</p>
+        </div>
+        <div class="internal b_b b_l" id="Btn3">
+            <p class="choice1" id="b3c1">O</p>
+            <p class="choice2" id="b3c2">X</p>
+        </div>
+        
+        
+    </div>
+    <div class="wrapper">
+        <div class="internal b_t b_b b_r" id="Btn4">
+            <p class="choice1" id="b4c1">O</p>
+            <p class="choice2" id="b4c2">X</p>
+        </div>
+        <div class="internal b_c" id="Btn5">
+            <p class="choice1" id="b5c1">O</p>
+            <p class="choice2" id="b5c2">X</p>
+        </div>
+        <div class="internal b_l b_t b_b" id="Btn6">
+            <p class="choice1" id="b6c1">O</p>
+            <p class="choice2" id="b6c2">X</p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="internal b_t b_r" id="Btn7">
+            <p class="choice1" id="b7c1">O</p>
+            <p class="choice2" id="b7c2">X</p>
+        </div>
+        <div class="internal b_r b_l b_t" id="Btn8">
+            <p class="choice1" id="b8c1">O</p>
+            <p class="choice2" id="b8c2">X</p>
+        </div>
+        <div class="internal b_l b_t" id="Btn9">
+            <p class="choice1" id="b9c1">O</p>
+            <p class="choice2" id="b9c2">X</p>
+        </div>
+    </div>
+</body>
+</html>
